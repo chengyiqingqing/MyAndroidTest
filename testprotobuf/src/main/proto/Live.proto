@@ -1,0 +1,31 @@
+syntax = "proto3";
+option java_package = "com.sww.protobuf.test";
+option java_multiple_files = true;
+
+message CurrentData {
+    uint32 status = 2;  //1:直播不存在  2:正在进行   3：直播结束了  4:直播被停止 5:主播无心跳
+    uint64 startTime = 3;   //直播开始时间，毫秒
+    uint64 nowTime = 4;   //当前时间，毫秒
+    uint32 totalUserNum = 5; //到目前这个点，看过这个直播的人次
+    uint32 userNum=6;
+    uint32 tourist=7;
+    uint32 smallLikeNum = 8;   //小赞次数
+    uint32 bigLikeNum = 9;   //大赞次数
+    uint32 likeNum = 10; //总共获得的赞数目
+    uint64 userSinceId = 11; //用户的sinceId, 用于过滤掉接收到currentData之前收到的"用户进出事件"
+    uint64 likeSinceId = 12; //赞的sinceId, 用于过滤掉接收到currentData之前收到的"赞事件"
+    uint64 commentSinceId = 13; //评论的sinceId, 用于过滤掉接收到currentData之前收到的"评论事件"
+    uint64 giftSinceId = 14; //礼物的sinceId, 用于过滤掉接收到currentData之前收到的"礼物事件"
+    uint64 otherSinceId = 15; //其他事件的sinceId, 用于过滤掉接收到currentData之前收到的"其他事件(关注、分享...)"
+	uint64 meiBean = 16;     //本场直播收到礼物总值
+    LiveRankInfo liveRankInfo = 17;   //直播排名信息
+}
+
+message LiveRankInfo {
+    string rank = 1;   //直播排名   -1 表示排名失效，客户端清理图标
+   	string bgUrl = 2;  // 背景url
+    string forwardUrl = 3;  //跳转url
+    string font_color = 4;  //字体颜色
+    int32 hash = 5;   // 排名的哈希值（判断是否相等）
+    string sdkForwardUrl = 6; //直播sdk新的url，兼容旧的版本
+}

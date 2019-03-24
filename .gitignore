@@ -1,0 +1,42 @@
+# OSX
+/local.properties
+/captures
+.externalNativeBuild
+*.DS_Store
+
+*.iml
+
+# gradle文件忽略上传file
+build/
+.gradle/
+*/build/
+
+# IDEA
+*.iml
+.idea/
+.idea/.name
+.idea/encodings.xml
+.idea/inspectionProfiles/Project_Default.xml
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/scopes/scope_settings.xml
+.idea/vcs.xml
+.idea/workspace.xml
+.idea/libraries
+
+# Built application files
+*.apk
+*.ap_
+
+# android studio自动忽略file
+.gradle
+build/
+/local.properties
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild

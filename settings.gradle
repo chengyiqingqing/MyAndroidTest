@@ -1,0 +1,1 @@
+include ':app', ':testprotobuf', ':testOverDraw', ':testDialogFragmentStatusBar', ':testGridView', ':testLookCrashSdk', ':testCustomView'

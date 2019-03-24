@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TopBar">
+        <!--1、中间标题部分-->
+        <attr name="textTitle" format="string"/>
+        <attr name="textColor" format="color"/>
+        <attr name="textSize" format="dimension"/>
+        <!--2、中间标题部分-->
+        <attr name="textButtonLeft" format="string"/>
+        <attr name="leftBackground" format="reference|color"/>
+        <attr name="leftButtonSize" format="dimension"/>
+        <!--3、中间标题部分-->
+        <attr name="textButtonRight" format="string"/>
+        <attr name="rightBackground" format="reference|color"/>
+        <attr name="rightButtonSize" format="dimension"/>
+    </declare-styleable>
+</resources>
