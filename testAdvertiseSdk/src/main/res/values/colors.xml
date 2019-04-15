@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="dl_btn_normal_gradient_start">#ff1283</color>
+    <color name="dl_btn_normal_gradient_end">#ff5e3d</color>
+
+    <color name="dl_btn_download_gradient_start">#00d79b</color>
+    <color name="dl_btn_download_gradient_end">#05d55d</color>
+    <color name="dl_text_666666">#666666</color>
+    <color name="dl_color_e5e5e5">#e5e5e5</color>
+    <color name="dl_color_333333">#333333</color>
+
+    <color name="dl_primary_pink">#E95868</color>
+    <color name="dl_bg_white">#FFFFFF</color>
+    <color name="dl_text_black">#000000</color>
+    <color name="dl_text_gray">#585858</color>
+
+    <color name="dl_black10">#7f000000</color>
+    <color name="dl_black60">#ab000000</color>
+
+</resources>

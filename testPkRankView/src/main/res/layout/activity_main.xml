@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.meitu.sww.testpkrankview.PkRankView
+        android:id="@+id/pk_rank_view"
+        android:layout_width="74dp"
+        android:layout_height="28dp"
+        />
+
+    <com.meitu.sww.testpkrankview.PkRankView
+        android:id="@+id/pk_rank_view2"
+        android:layout_width="74dp"
+        android:layout_height="28dp"
+        android:layout_below="@id/pk_rank_anim_view"
+        android:layout_marginTop="100dp"
+        android:background="#00ff00"
+        />
+
+    <com.meitu.sww.testpkrankview.PkRankAnimView
+        android:id="@+id/pk_rank_anim_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

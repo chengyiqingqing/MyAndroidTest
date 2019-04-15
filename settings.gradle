@@ -1,1 +1,1 @@
-include ':app', ':testprotobuf', ':testOverDraw', ':testDialogFragmentStatusBar', ':testGridView', ':testLookCrashSdk', ':testCustomView'
+include ':app', ':myViewAddAndRemove', ':testPkRankView'

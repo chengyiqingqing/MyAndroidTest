@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
+
+    <!--段位动画背景:处于屏幕的最中央-->
+    <ImageView
+        android:id="@+id/image_bg"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/live_pk_rank_anim_bg_king"/>
+
+    <!--【文案展示】：用于王者和最强王者展示-->
+    <ImageView
+        android:id="@+id/text_rank_level"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/live_pk_rank_anim_text_level2"/>
+
+    <!--【恭喜升级】文案展示-->
+    <ImageView
+        android:id="@+id/image_wish_description"
+        android:layout_width="180dp"
+        android:layout_height="43dp"
+        android:src="@mipmap/live_image_wish_description"
+        android:layout_above="@id/image_bg"
+        android:layout_centerHorizontal="true"
+        android:translationY="22dp"/>
+
+    <!--光晕背景-->
+    <ImageView
+        android:id="@+id/image_forgound"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/image_wish_description"
+        android:layout_alignBottom="@id/image_bg"
+        android:scaleType="fitXY"
+        android:background="@mipmap/live_pk_white_light"
+        android:translationX="-250dp"
+        />
+
+</RelativeLayout>

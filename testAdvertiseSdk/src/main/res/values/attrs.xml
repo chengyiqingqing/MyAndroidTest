@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyDownButtonStyle">
+        <!--文字颜色和字号-->
+        <attr name="textColor" format="color"/>
+        <attr name="textSize" format="dimension"/>
+        <!--按钮边框宽度，边框颜色-->
+        <attr name="buttonStrokeWidth" format="dimension"/>
+        <attr name="buttonStrokeColor" format="color"/>
+        <!--按钮宽度，高度，背景颜色-->
+        <attr name="buttonWidth" format="dimension"/>
+        <attr name="buttonHeight" format="dimension"/>
+        <attr name="buttonBackground" format="reference|color"/>
+        <!--外边距的margin 自己就可以控制了-->
+        <!--<attr  name="marginLeft" format="dimension"/>
+        <attr name="marginTop" format="dimension"/>-->
+        <!--圆角-->
+        <attr name="corner" format="dimension"/>
+    </declare-styleable>
+</resources>

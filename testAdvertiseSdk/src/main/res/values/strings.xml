@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">testAdvertiseSdk</string>
+
+    <string name="dl_ui_btn_download">立即下载</string>
+</resources>
