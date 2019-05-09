@@ -1,25 +1,21 @@
 package com.meitu.sww.testpkrankview;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
+import android.support.v7.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+/**
+ * @author ShaoWenWen
+ * @date 2019/4/29
+ */
+public class PkRankActivity extends AppCompatActivity {
 
     private PkRankView pkRankView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_test_scheme);
         pkRankView = findViewById(R.id.pk_rank_view);
-        pkRankView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,PkRankActivity.class));
-            }
-        });
     }
 
     @Override

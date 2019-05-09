@@ -56,17 +56,17 @@ public class PkRankView extends FrameLayout {
 
     public void updateView() {
         if (type == 1) {
-            imageBg.setImageResource(R.mipmap.type1);
+            imageBg.setImageResource(R.mipmap.live_type_bronze);
             setTextMarginRight(dip2px(13));
             textRankLevel.setText("青铜Ⅱ");
             textRankLevel.setTextColor(getResources().getColor(R.color.color_FCDCD8));
         } else if (type == 2) {
-            imageBg.setImageResource(R.mipmap.type3);
+            imageBg.setImageResource(R.mipmap.live_type_king);
             setTextMarginRight(dip2px(4));
             textRankLevel.setText("王者x999");
             textRankLevel.setTextColor(getResources().getColor(R.color.color_FCDCD8));
         } else if (type == 3) {
-            imageBg.setImageResource(R.mipmap.type3);
+            imageBg.setImageResource(R.mipmap.live_type_king);
             setTextMarginRight(dip2px(6));
             textRankLevel.setText("最强王者");
             textRankLevel.setTextColor(getResources().getColor(R.color.color_FCDCD8));
