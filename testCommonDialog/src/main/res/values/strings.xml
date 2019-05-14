@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">testCommonDialog</string>
+    <string name="mtcp_ok">确认</string>
+</resources>

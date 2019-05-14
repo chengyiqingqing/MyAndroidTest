@@ -1,1 +1,1 @@
-include ':app', ':myViewAddAndRemove', ':testPkRankView', ':testPermissionApply'
+include ':app', ':myViewAddAndRemove', ':testPkRankView', ':testPermissionApply', ':testCommonDialog'

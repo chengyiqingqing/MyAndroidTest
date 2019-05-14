@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="mtcp_color_1D212C">#FF1D212C</color>
+    <color name="mtcp_color_331d212c">#331d212c</color>
+    <color name="mtcp_color_6C6F75">#6C6F75</color>
+    <color name="voice_color_44527b">#44527b</color>
+</resources>
