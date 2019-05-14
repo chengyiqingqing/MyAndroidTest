@@ -100,7 +100,7 @@ public class DeepLinkInterceptDialog extends AppCompatDialog {
         });
     }
 
-    private void setCountDownTime(int milliSecond){
+    private void setCountDownTime(int milliSecond) {
         textOk.setCountDownTime(milliSecond);
     }
 
