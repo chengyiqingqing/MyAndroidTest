@@ -12,22 +12,23 @@ import android.view.WindowManager;
 import android.widget.TextView;
 
 /**
+ * 通用弹窗；
  * @author ShaoWenWen
  * @date 2019/5/14
  */
-public class CommonDialog extends AppCompatDialog {
+public class DeepLinkInterceptDialog extends AppCompatDialog {
 
     private View layoutContent;
     private TextView textTitle;
     private TextView textMessage;
-    private TextView textOk;
+    private CountDownTextView textOk;
     private TextView textCancel;
     private View textButtonLine;
 
-    public CommonDialog(Context context) {
+    private DeepLinkInterceptDialog(Context context) {
         super(context);
         setDialogStyleParams();
-        setContentView(R.layout.mtcp_dialog_common_hint);
+        setContentView(R.layout.mtcp_dialog_deep_link_intercept);
         initView();
     }
 
@@ -53,7 +54,9 @@ public class CommonDialog extends AppCompatDialog {
     private void setTitle(String title) {
         if (TextUtils.isEmpty(title)) {
             textTitle.setVisibility(View.GONE);
+            return;
         }
+        textTitle.setVisibility(View.VISIBLE);
     }
 
     private void setMessage(String message) {
@@ -67,6 +70,13 @@ public class CommonDialog extends AppCompatDialog {
             @Override
             public void onClick(View v) {
                 if (positiveButtonClickListener != null) positiveButtonClickListener.onClick(v);
+                dismiss();
+            }
+        });
+        textOk.setICountDownTimeOver(new CountDownTextView.ICountDownTimeOver() {
+            @Override
+            public void countDownTimeOver() {
+                if (positiveButtonClickListener != null) positiveButtonClickListener.onClick(textOk);
                 dismiss();
             }
         });
@@ -90,6 +100,22 @@ public class CommonDialog extends AppCompatDialog {
         });
     }
 
+    private void setCountDownTime(int milliSecond){
+        textOk.setCountDownTime(milliSecond);
+    }
+
+    @Override
+    public void show() {
+        super.show();
+        textOk.startCountDown();
+    }
+
+    @Override
+    public void dismiss() {
+        if (textOk != null) textOk.cancelCountDown();
+        super.dismiss();
+    }
+
     public static class Builder {
 
         private final Context context;
@@ -101,6 +127,7 @@ public class CommonDialog extends AppCompatDialog {
         private View.OnClickListener negativeButtonClickListener;
         // 点击弹窗外部区域，弹窗是否消失
         private boolean cancelable = true;
+        private int countDownTime = CountDownTextView.DEFAULT_COUNT_DOWN_TIME;
 
         public Builder(Context context) {
             this.context = context;
@@ -136,18 +163,25 @@ public class CommonDialog extends AppCompatDialog {
             return this;
         }
 
+        public Builder setCountDownTime(int countDownTime) {
+            this.countDownTime = countDownTime;
+            return this;
+        }
+
         public Builder setCancelable(boolean cancelable) {
             this.cancelable = cancelable;
             return this;
         }
 
-        public CommonDialog create() {
-            CommonDialog dialog = new CommonDialog(context);
+        public DeepLinkInterceptDialog create() {
+            DeepLinkInterceptDialog dialog = new DeepLinkInterceptDialog(context);
             dialog.setTitle(title);
             dialog.setMessage(message);
             dialog.setPositiveButton(positiveButtonText, positiveButtonClickListener);
             dialog.setNegativeButton(negativeButtonText, negativeButtonClickListener);
             dialog.setCancelable(cancelable);
+            dialog.setCanceledOnTouchOutside(cancelable);
+            dialog.setCountDownTime(countDownTime);
             return dialog;
         }
 

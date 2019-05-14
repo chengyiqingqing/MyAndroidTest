@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">testCommonDialog</string>
     <string name="mtcp_ok">确认</string>
+    <string name="mtcp_count_down_timer">%1$s(%2$d)</string>
+    <string name="mtcp_count_down_toast_tip">%d秒后即将离开app，前往第三方应用</string>
+    <string name="mtcp_toast_tip">即将离开app，前往第三方应用</string>
 </resources>

@@ -66,7 +66,7 @@
             android:background="@color/mtcp_color_331d212c"
             android:visibility="visible"/>
 
-        <TextView
+        <com.meitu.sww.testcommondialog.CountDownTextView
             android:id="@+id/text_ok"
             android:layout_width="0dp"
             android:layout_height="match_parent"
