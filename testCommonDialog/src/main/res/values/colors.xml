@@ -8,4 +8,7 @@
     <color name="mtcp_color_331d212c">#331d212c</color>
     <color name="mtcp_color_6C6F75">#6C6F75</color>
     <color name="voice_color_44527b">#44527b</color>
+    <color name="web_color_ffffff">#ffffff</color>
+    <color name="web_color_000000">#000000</color>
+
 </resources>

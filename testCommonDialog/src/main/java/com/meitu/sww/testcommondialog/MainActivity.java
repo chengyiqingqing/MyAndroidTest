@@ -32,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clickit(View view) {
-        showList();
+//        showList();
+        showToast();
     }
 
     public void showList() {

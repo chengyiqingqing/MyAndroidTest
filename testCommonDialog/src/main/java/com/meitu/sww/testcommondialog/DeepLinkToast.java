@@ -64,6 +64,10 @@ public class DeepLinkToast extends AppCompatDialog {
                 dismiss();
             }
         });
+        textToastTip.setTextColor(getContext().getResources().getColor(R.color.web_color_ffffff));
+        textToastTip.setPadding(ViewUtil.dip2px(12), ViewUtil.dip2px(8), ViewUtil.dip2px(12), ViewUtil.dip2px(8));
+        ViewUtil.addCorner(textToastTip, ViewUtil.dip2px(8), getContext().getResources().getColor(R.color.web_color_000000),
+                0, 0);
     }
 
     @Override
